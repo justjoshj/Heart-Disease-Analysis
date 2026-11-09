@@ -1,5 +1,19 @@
 'Model: Logistic Regression Feature Importance'
 
+"""
+This model observes the relationship between individual health markers and correlation to having heart disease.
+
+Logistic Regression assigns a coefficient to each feasture, indicating how that feature infleunce's the model's prediction.
+
+Large coefficients indicate stronger influence on model's predictions. 
+The strongest features are ST slope (aprox. 1.2), sex (aprox. 1.2), and angina (.aprox 1.0),
+while chloesterol (virtually none), resting bp (virtually none) , and heartrate (almost none) have the weakest correlation.
+
+Logistic Regression helps understandwhat model learned from training splits.
+
+The coefficients are organized into a dataframe and are sorted from highest to lowest absolute importance to help better observe how features compare
+in correlation to target (heart disease).
+"""
 from heart_data import df, x_axis, x_train, y_train
 from sklearn.linear_model import LogisticRegression
 
